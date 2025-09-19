@@ -1,0 +1,192 @@
+/* sidebar-admin.css
+   Styles chuyên biệt cho Sidebar Admin (clean + responsive).
+   Import vào SidebarAdmin.jsx: import "../../assets/style/sidebar-admin.css";
+*/
+
+.sidebar-admin {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* left column */
+.sidebar-admin__aside {
+  width: 250px;
+  background: #ffffff;
+  border-right: 1px solid #e6e9ee;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(16,24,40,0.04);
+  box-sizing: border-box;
+  transition: width .18s ease;
+  z-index: 10;
+}
+
+/* collapsed state helper (applied via media query below) */
+.sidebar-admin__aside--collapsed {
+  width: 72px;
+}
+
+/* profile area */
+.sidebar-admin__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+/* avatar small */
+.sidebar-admin__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.sidebar-admin__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* name & email */
+.sidebar-admin__name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #111827;
+  text-align: center;
+}
+.sidebar-admin__email {
+  font-size: 0.82rem;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1;
+}
+
+/* nav list */
+.sidebar-admin__nav {
+  margin-top: 8px;
+  padding: 0;
+  list-style: none;
+}
+.sidebar-admin__nav-item {
+  margin: 6px 0;
+}
+
+/* nav link layout */
+.sidebar-admin__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  color: #111827;
+  text-decoration: none;
+  transition: background .12s, color .12s;
+}
+.sidebar-admin__link svg {
+  flex: 0 0 auto;
+}
+
+/* text label inside */
+.sidebar-admin__label {
+  font-size: 0.95rem;
+}
+
+/* hover / active */
+.sidebar-admin__link:hover {
+  background: #f3f6fb;
+  color: #155dc1;
+}
+.sidebar-admin__link--active {
+  background: #1877f2;
+  color: #fff;
+}
+
+/* logout button wrapper */
+.sidebar-admin__logout {
+  margin-top: 12px;
+}
+.sidebar-admin__logout-button {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: transparent;
+  color: #111827;
+  cursor: pointer;
+  transition: background .12s, border-color .12s;
+  font-weight: 600;
+}
+.sidebar-admin__logout-button svg { opacity: .9; }
+.sidebar-admin__logout-button:hover {
+  background: #f3f6fb;
+  border-color: #d1d5db;
+}
+
+/* make sure text is visible in collapsed state via tooltip */
+.sidebar-admin__tooltip {
+  position: relative;
+}
+
+/* small screens: collapse sidebar (icons only) */
+@media (max-width: 768px) {
+  .sidebar-admin__aside {
+    width: 72px; /* collapsed */
+    padding: 10px 8px;
+  }
+
+  /* center icons */
+  .sidebar-admin__profile { padding-top: 6px; }
+  .sidebar-admin__name, .sidebar-admin__email, .sidebar-admin__label {
+    display: none; /* hide text labels */
+  }
+
+  .sidebar-admin__link {
+    justify-content: center;
+    padding: 8px;
+  }
+
+  .sidebar-admin__logout-button {
+    padding: 8px;
+    justify-content: center;
+  }
+
+  /* show tooltip on hover (accessible) */
+  .sidebar-admin__link:hover::after,
+  .sidebar-admin__logout-button:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    z-index: 50;
+  }
+
+  /* tweak main content padding */
+  .sidebar-admin__content {
+    padding-left: 12px;
+    flex: 1;
+  display: flex;          /* để con (ChatPage) flex theo */
+  flex-direction: column; /* giữ cấu trúc dọc */
+  height: 100vh;          /* chiếm hết màn hình */
+  overflow: hidden;       /* tránh tràn scroll kép */
+  background: #f9fafb;    /* nền nhạt, giống Zalo/FB */
+  }
+}
+
+/* larger screens small tweak */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar-admin__aside { width: 220px; }
+}

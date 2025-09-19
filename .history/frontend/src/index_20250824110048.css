@@ -1,0 +1,244 @@
+/* ===========================
+   Base / Variables
+   =========================== */
+:root{
+  --font-sans: system-ui, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Palette */
+  --bg: #f0f2f5;             /* page background (facebook-like) */
+  --surface: #ffffff;        /* cards, inputs */
+  --text: #111827;           /* main text */
+  --muted: #6b7280;          /* muted text */
+  --primary: #1877f2;        /* facebook-blue */
+  --primary-600: #155dc1;
+  --danger: #dc2626;
+
+  /* Borders / shadow */
+  --border: #e5e7eb;
+  --soft-border: rgba(0,0,0,0.06);
+  --shadow-sm: 0 1px 3px rgba(16,24,40,0.06);
+  --shadow-md: 0 2px 8px rgba(16,24,40,0.08);
+
+  /* Sizes */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-full: 9999px;
+}
+
+/* Minimal reset */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+}
+
+/* ===========================
+   Links / Headings
+   =========================== */
+a { color: var(--primary); font-weight: 500; text-decoration: none; }
+a:hover { color: var(--primary-600); text-decoration: underline; }
+
+h1,h2,h3,h4 { color: var(--text); margin: 0 0 .5rem 0; font-weight: 600; }
+h1 { font-size: 2rem; line-height: 1.1; }
+
+/* ===========================
+   Cards / Layout helpers
+   =========================== */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem;
+}
+
+/* small utility classes used in components */
+.text-muted { color: var(--muted); font-size: .9rem; }
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-2 { gap: .5rem; }
+
+/* ===========================
+   Form controls (inputs, selects, textarea)
+   =========================== */
+input, textarea, select {
+  width: 100%;
+  padding: .6rem .75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  transition: box-shadow .15s, border-color .15s, background .15s;
+}
+
+input::placeholder,
+textarea::placeholder { color: #9ca3af; }
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 6px rgba(24,119,242,0.08);
+}
+
+/* compact form control for inline icon buttons */
+.input-inline { display:flex; gap:.5rem; align-items:center; }
+
+/* ===========================
+   Buttons (systemized)
+   ===========================
+   Use:
+     <button class="btn">Primary</button>
+     <button class="btn btn--outline">Outline</button>
+     <button class="btn btn--ghost">Ghost</button>
+     <button class="btn btn--danger">Danger</button>
+     <button class="btn btn--icon">icon</button>
+*/
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .55rem .9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background .12s, border-color .12s, transform .06s;
+}
+.btn:hover { background: var(--primary-600); transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+/* Variants */
+.btn--outline {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: transparent;
+}
+.btn--danger {
+  background: var(--danger);
+  color: #fff;
+  border-color: rgba(0,0,0,0.06);
+}
+.btn--icon {
+  padding: .35rem;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* utility text colors for quick use */
+.text-success { color: #059669; font-weight:600; }
+.text-danger { color: var(--danger); font-weight:600; }
+
+/* ===========================
+   Avatar helpers
+   =========================== */
+/* small (sidebar) */
+.avatar {
+  display:inline-block;
+  overflow:hidden;
+  background: #f3f4f6;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--soft-border);
+}
+.avatar--sm { width: 48px; height: 48px; box-shadow: var(--shadow-sm); }
+.avatar--lg { width: 112px; height: 112px; box-shadow: var(--shadow-md); border: 2px solid var(--border); }
+
+.avatar img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  border-radius:inherit;
+}
+
+/* ===========================
+   Sidebar / Layout specifics
+   =========================== */
+.sidebar {
+  width: 250px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  min-height: 100vh;
+  padding: 1rem;
+}
+.sidebar .profile {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.35rem;
+  margin-bottom: 1rem;
+}
+.nav-list { list-style: none; padding: 0; margin: 0; }
+.nav-list li + li { margin-top: .35rem; }
+.nav-link {
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  padding:.55rem .6rem;
+  border-radius: .5rem;
+  color: var(--text);
+  text-decoration:none;
+}
+.nav-link:hover { background: #f3f6fb; color: var(--primary-600); }
+
+/* active link modifier */
+.nav-link--active { background: var(--primary); color: #fff; }
+
+/* ===========================
+   Misc / Responsive
+   =========================== */
+.page {
+  display:flex;
+  gap: 1rem;
+  min-height: 100vh;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* responsive avatar & spacing */
+@media (max-width: 640px) {
+  .avatar--lg { width: 80px; height: 80px; }
+  .sidebar { width: 72px; padding: .6rem; }
+  .nav-link { padding: .4rem; font-size: .95rem; }
+}
+
+/* ===========================
+   Accessibility notes
+   ===========================
+   - Add .btn--outline to logout button for outline style:
+     <button class="btn btn--outline" ...>Logout</button>
+   - Add aria- labels where needed for icons
+*/

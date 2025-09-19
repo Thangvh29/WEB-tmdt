@@ -1,0 +1,59 @@
+/* Navbar chung */
+.navbar {
+  background-color: #ffffff; /* màu nền trắng */
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #333333;
+  text-decoration: none;
+}
+
+/* Menu items */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+/* Links */
+.nav-link {
+  text-decoration: none;
+  color: #555555;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+.nav-link.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Responsive: khi màn hình bé, menu sẽ stack dọc */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+}

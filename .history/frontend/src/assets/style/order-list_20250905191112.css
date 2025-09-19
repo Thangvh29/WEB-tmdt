@@ -1,0 +1,18 @@
+/* frontend/src/assets/style/order-list.css */
+/* Định nghĩa style cho table, modal, v.v. */
+.order-status-page,
+.order-history-page {
+  padding: 20px;
+}
+
+.error-message {
+  color: red;
+}
+.table-responsive {
+  overflow: visible !important;
+}
+
+/* Đảm bảo menu luôn nổi trên cùng */
+.dropdown-menu {
+  z-index: 2000; /* cao hơn modal/table */
+}

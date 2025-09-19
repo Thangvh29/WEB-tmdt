@@ -1,0 +1,34 @@
+
+/* Grid chiếm hết ngang */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;            /* <-- ép full width */
+}
+
+/* Card chung */
+.product-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ảnh sản phẩm */
+.product-card img {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* Giới hạn tên sản phẩm hiển thị */
+.product-card .card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.product-list-page {
+  flex: 1;                /* chiếm hết không gian còn lại */
+  width: 100%;
+  padding: 20px;
+}

@@ -1,0 +1,137 @@
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.product-images .main-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-images .thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.product-images .thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-images .thumb.active {
+  border-color: #007bff;
+}
+
+.product-info .product-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.product-info .meta {
+  margin: 10px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.product-info .price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e63946;
+  margin: 10px 0;
+}
+
+.product-info .status {
+  margin-bottom: 15px;
+}
+
+.variants {
+  margin: 15px 0;
+}
+
+.variant-select {
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.product-description {
+  margin-top: 40px;
+}
+.payment-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.payment-modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  max-width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.payment-card {
+  width: 100%;
+}
+
+/* Khung chọn biến thể */
+.variant-select label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Container các option */
+.variant-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Nút option */
+.variant-option {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.variant-option:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+/* Trạng thái active */
+.variant-option.active {
+  border-color: #007bff;
+  background: #e6f0ff;
+  color: #007bff;
+  font-weight: 600;
+}

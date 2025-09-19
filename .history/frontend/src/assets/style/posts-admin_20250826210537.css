@@ -1,0 +1,235 @@
+/* src/assets/style/posts-admin.css */
+
+/* General */
+.admin-posts-page,
+.user-posts-management-page,
+.social-management-page {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #050505;
+}
+
+/* Buttons */
+.admin-posts-page button,
+.user-posts-management-page button,
+.social-management-page button,
+.btn-create,
+.submit-btn {
+  background-color: #1877f2;
+  color: #fff;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin-posts-page button:hover,
+.user-posts-management-page button:hover,
+.social-management-page button:hover,
+.btn-create:hover,
+.submit-btn:hover {
+  background-color: #166fe5;
+}
+
+/* Header */
+.posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Tăng spacing */
+}
+
+.posts-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #050505;
+}
+
+/* Form */
+.create-post-form .title-input {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  outline: none;
+  color: #050505;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.create-post-form .content-input {
+  min-height: 60px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  outline: none;
+  color: #050505;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: hidden;
+  resize: none;
+}
+
+.create-post-form .content-input:empty:before {
+  content: attr(data-placeholder);
+  color: #65676b;
+}
+
+/* Preview images */
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.preview-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.preview-grid .remove-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+/* Post card */
+.post-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.post-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.author-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.author-section img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.author-section p {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #050505;
+}
+
+.post-content {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #050505;
+}
+
+/* Images */
+.post-images.single img {
+  width: 100%;
+  border-radius: 8px;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.post-images.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.post-images.grid img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Stats & Actions */
+.post-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #65676b;
+  margin-top: 8px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ebedf0;
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.post-actions button {
+  background: transparent;
+  color: #65676b;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+  flex: 1;
+  justify-content: center;
+}
+
+.post-actions button:hover {
+  color: #1877f2;
+}
+
+/* Comments */
+.comments-section {
+  margin-top: 12px;
+  border-top: 1px solid #ebedf0;
+  padding-top: 12px;
+}
+
+.comment-item {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.comment-item > div:first-child {
+  flex-shrink: 0;
+}
+
+.comment-item .bg-[#f0f2f5] {
+  border-radius: 18px;
+  padding: 8px 12px;
+}
+
+.add-comment input {
+  border: none;
+  background: #f0f2f5;
+  border-radius: 999px;
+  padding: 8px 16px;
+  outline: none;
+  flex: 1;
+}

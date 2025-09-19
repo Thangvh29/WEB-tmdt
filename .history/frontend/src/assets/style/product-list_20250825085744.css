@@ -1,0 +1,67 @@
+/* src/assets/style/product-list.css */
+
+/* Khung content admin chiếm hết ngang (trừ sidebar) */
+.admin-content, 
+.product-list-page {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;   /* tránh bị Bootstrap container bó hẹp */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* tránh xuất hiện thanh scroll ngang ngoài ý muốn */
+}
+
+/* Grid sản phẩm full ngang */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+  gap: 20px;
+  width: 100%;
+  align-items: stretch; /* card cao đều */
+}
+
+/* Card chung */
+.product-card, 
+.product-grid .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover, 
+.product-grid .card:hover {
+  transform: translateY(-4px);
+}
+
+/* Ảnh sản phẩm */
+.product-card img,
+.product-grid .card img {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Tên sản phẩm */
+.product-card .card-title,
+.product-grid .card .card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive: khi màn hình nhỏ hơn 576px, grid chỉ còn 1 cột */
+@media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

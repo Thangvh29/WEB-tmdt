@@ -1,0 +1,52 @@
+/* src/assets/style/custom-admin.css */
+
+/* Simple backdrop for our CSS-only modal */
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1050;
+}
+
+/* Show modal as centered block (Bootstrap uses JS; we emulate minimal behavior) */
+.modal-custom {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1060;
+  padding: 1rem;
+}
+
+/* Make dialog scrollable on small screens */
+.modal-custom .modal-dialog {
+  max-width: 720px;
+  width: 100%;
+}
+
+/* Slight shadow and border radius keep Bootstrap look */
+.modal-custom .modal-content {
+  border-radius: .5rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+}
+
+/* small adjustments for the fixed overlay form */
+@media (max-width: 576px) {
+  .modal-custom { padding: .5rem; align-items: flex-end; }
+  .modal-custom .modal-dialog { max-width: 100%; margin: 0; }
+}
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+/* card spacing trên mobile */
+.card + .card { margin-top: .6rem; }
+
+/* nếu table-responsive vẫn overflow do long words, đảm bảo table không có nowrap */
+.table td, .table th {
+  white-space: nowrap; /* default, but we control per-column with wrappers */
+}

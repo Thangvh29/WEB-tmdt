@@ -1,0 +1,82 @@
+.payment-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.payment-modal {
+  background: #fff;
+  border-radius: 12px;
+  width: 380px;
+  max-width: 90%;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.payment-modal h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111827;
+  text-align: center;
+}
+
+.payment-modal .total-amount {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2563eb;
+}
+
+.payment-modal .methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.payment-modal .methods button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+}
+
+.payment-modal .methods button:hover {
+  background: #2563eb;
+}
+
+.payment-modal .cancel-btn {
+  width: 100%;
+  background: transparent;
+  color: #6b7280;
+  text-decoration: underline;
+  padding: 10px 0;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.payment-modal .cancel-btn:hover {
+  color: #111827;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

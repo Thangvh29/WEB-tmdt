@@ -1,0 +1,193 @@
+/* Container tổng */
+.payment-tab {
+  position: relative;
+  padding-bottom: 80px; /* cho fixed bottom thanh toán */
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* Thông báo loading hoặc không có đơn */
+.payment-tab p {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* PaymentItem wrapper */
+.payment-item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  background-color: #fff;
+  transition: box-shadow 0.2s;
+}
+
+.payment-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Left part: checkbox + image + info */
+.payment-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Checkbox */
+.payment-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #3b82f6; /* blue-500 */
+}
+
+/* Product image */
+.payment-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Product info */
+.payment-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.payment-item-info .name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #111827;
+}
+
+.payment-item-info .qty,
+.payment-item-info .date {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Right part: total + pay button */
+.payment-item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+}
+
+.payment-item-right .amount {
+  font-weight: 600;
+  color: #111827;
+}
+
+.payment-item-right button {
+  font-size: 12px;
+  color: #3b82f6;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.payment-item-right button:hover {
+  color: #1d4ed8; /* darker blue */
+}
+
+/* Fixed footer thanh toán */
+.payment-tab-footer {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #fff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 50;
+}
+
+.payment-tab-footer span {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.payment-tab-footer button {
+  background-color: #3b82f6;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.payment-tab-footer button:hover {
+  background-color: #2563eb;
+}
+
+/* Modal overlay */
+.payment-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Modal box */
+.payment-modal-box {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 360px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.payment-modal-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.payment-modal-box p {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.payment-modal-box .method-btn {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #3b82f6;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.payment-modal-box .method-btn:hover {
+  background-color: #2563eb;
+}
+
+.payment-modal-box .cancel-btn {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 13px;
+  color: #6b7280;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

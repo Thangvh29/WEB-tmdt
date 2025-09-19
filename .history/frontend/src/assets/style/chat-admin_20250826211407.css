@@ -1,0 +1,30 @@
+/* frontend/src/assets/style/chat-admin.css */
+/* General */
+.chat-page {
+  background: #f0f2f5; /* Giống Zalo background */
+}
+
+.conversation-list {
+  background: white;
+}
+
+.conversation-item:hover {
+  background: #e4e6eb;
+}
+
+.chat-header {
+  background: #0084ff; /* Blue Zalo */
+  color: white;
+}
+
+.messages {
+  background: #f0f2f5;
+}
+
+.message .bg-blue-500 {
+  border-radius: 18px 18px 0 18px; /* Bubble sent */
+}
+
+.message .bg-gray-200 {
+  border-radius: 18px 18px 18px 0; /* Bubble received */
+}

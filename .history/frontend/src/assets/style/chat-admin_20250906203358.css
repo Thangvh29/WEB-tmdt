@@ -1,0 +1,25 @@
+.chat-page {
+  background: #f9fafb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.conversation-list {
+  background: #fff;
+}
+.conversation-list .active {
+  background: #0084ff;
+  color: white;
+}
+
+/* Header */
+.chat-header {
+  background: #0084ff;
+  color: white;
+  font-weight: 500;
+}
+
+/* Messages */
+.messages {
+  background: #e5ddd5; /* màu nền giống Zalo */
+}

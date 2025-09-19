@@ -1,0 +1,6 @@
+/* Products grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* giảm min-width */
+  gap: 15px; /* khoảng cách giữa các card */
+}

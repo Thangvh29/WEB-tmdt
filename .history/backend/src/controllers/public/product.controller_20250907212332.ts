@@ -1,0 +1,1 @@
+// src/controllers/public/product.controller.ts

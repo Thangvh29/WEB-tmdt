@@ -1,0 +1,67 @@
+/* Thanh nav chính trong trang admin */
+.admin-navbar {
+  background: linear-gradient(90deg, #1a73e8, #0a47a9); /* xanh dương giống social */
+  color: #fff;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Logo hoặc tiêu đề bên trái */
+.admin-navbar .logo {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.admin-navbar .logo:hover {
+  transform: scale(1.05);
+}
+
+/* Menu bên phải */
+.admin-navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.admin-navbar .nav-links a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.admin-navbar .nav-links a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Nút logout hoặc user profile */
+.admin-navbar .nav-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-navbar .nav-user img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: transform 0.2s ease;
+}
+
+.admin-navbar .nav-user img:hover {
+  transform: rotate(5deg) scale(1.05);
+}

@@ -1,0 +1,36 @@
+/* frontend/src/assets/style/chat-admin.css */
+
+.chat-page {
+  background: #f9fafb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.conversation-list {
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+}
+
+.conversation-item {
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.conversation-item.active {
+  background: #0084ff;
+  color: white;
+}
+
+.chat-header {
+  background: #0084ff;
+  color: white;
+  font-weight: 500;
+}
+
+.messages {
+  background: #e5ddd5; /* giống Zalo */
+  padding: 1rem;
+}
+
+.message {
+  font-size: 14px;
+  line-height: 1.4;
+}

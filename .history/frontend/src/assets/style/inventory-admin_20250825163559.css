@@ -1,0 +1,7 @@
+/* src/assets/style/inventory-admin.css */
+.inventory-page { padding: 20px; }
+.inventory-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+.product-card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; text-align: center; }
+.product-card img { max-width: 100%; height: auto; }
+.pagination { margin-top: 20px; text-align: center; }
+.pagination button { margin: 0 10px; }

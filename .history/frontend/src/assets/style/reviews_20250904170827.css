@@ -1,0 +1,44 @@
+.reviews {
+  margin-top: 40px;
+}
+
+.review-form textarea {
+  width: 100%;
+  min-height: 80px;
+  margin: 8px 0;
+  padding: 8px;
+}
+
+.review-list {
+  margin-top: 20px;
+}
+
+.review-item {
+  border-top: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  color: #ffb400;
+}
+
+.reply-form textarea {
+  width: 100%;
+  min-height: 50px;
+  margin: 8px 0;
+  padding: 6px;
+}
+
+.reply-item {
+  margin-left: 20px;
+  border-left: 2px solid #eee;
+  padding-left: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}

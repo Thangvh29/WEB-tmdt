@@ -1,0 +1,38 @@
+/* src/assets/style/product-list.css */
+.product-list-page, .product-old-list-page {
+  padding: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100% !important;
+}
+
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card button {
+  margin: 5px;
+}
+/* Đảm bảo layout admin chiếm full chiều ngang */
+.sidebar-admin_content {
+  flex: 1 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;   /* rất quan trọng để grid không bị co lại */
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f9fafb; /* nền nhẹ */
+}

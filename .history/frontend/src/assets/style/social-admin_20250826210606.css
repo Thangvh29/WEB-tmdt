@@ -1,0 +1,55 @@
+/* src/assets/style/social-admin.css */
+
+/* Nav */
+.admin-navbar {
+  background: #1877f2; /* Blue FB */
+  color: #fff;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.admin-navbar .logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.admin-navbar .nav-links a {
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.admin-navbar .nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.admin-navbar .nav-user img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/* Tabs */
+.social-tabs-list {
+  display: flex;
+  border-bottom: 2px solid #1877f2;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tab[aria-selected="true"] {
+  color: #1877f2;
+  border-bottom: 2px solid #1877f2;
+  font-weight: bold;
+}

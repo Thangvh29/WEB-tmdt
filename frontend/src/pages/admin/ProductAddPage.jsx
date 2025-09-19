@@ -1,0 +1,21 @@
+// src/pages/admin/ProductAddPage.jsx
+import React from 'react';
+import ProductForm from '../../components/admin/Products/ProductForm';
+import { useNavigate } from 'react-router-dom';
+
+const ProductAddPage = () => {
+  const navigate = useNavigate();
+
+  const handleSubmitSuccess = () => {
+    navigate('/admin/products/list');
+  };
+
+  return (
+    <div className="product-add-page">
+      <h3>Thêm sản phẩm</h3>
+      <ProductForm onSubmitSuccess={handleSubmitSuccess} />
+    </div>
+  );
+};
+
+export default ProductAddPage;

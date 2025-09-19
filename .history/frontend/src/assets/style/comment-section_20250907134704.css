@@ -1,0 +1,108 @@
+.comment-section {
+  margin-top: 1rem;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Form bình luận */
+.comment-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.comment-form .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+.comment-form input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+.comment-form button {
+  background: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.comment-form button:hover {
+  background: #145dbf;
+}
+
+/* Comment item */
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.comment-item {
+  display: flex;
+  gap: 8px;
+}
+.comment-item .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.comment-body {
+  flex: 1;
+}
+.comment-bubble {
+  background: #f0f2f5;
+  border-radius: 18px;
+  padding: 8px 12px;
+  display: inline-block;
+  max-width: 500px;
+}
+.comment-bubble .author {
+  font-weight: 600;
+  margin-right: 6px;
+}
+.comment-bubble .time {
+  font-size: 12px;
+  color: gray;
+}
+.comment-bubble p {
+  margin: 4px 0 0;
+}
+
+/* Action buttons */
+.comment-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+  margin-left: 8px;
+  font-size: 12px;
+  color: gray;
+}
+.comment-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: gray;
+}
+.comment-actions button:hover {
+  text-decoration: underline;
+  color: #1877f2;
+}
+
+/* Reply */
+.reply-item {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  margin-left: 44px;
+}
+.reply-item .avatar.small {
+  width: 28px;
+  height: 28px;
+}
+.comment-bubble.reply {
+  background: #e4e6eb;
+}

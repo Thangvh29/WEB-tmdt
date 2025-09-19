@@ -1,0 +1,23 @@
+/* src/assets/style/admin-products.css */
+.products-page .tabs .tab {
+  padding: 10px 20px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  text-decoration: none !important; /* Reset gạch chân */
+  color: #333 !important; /* Force màu chữ */
+  display: inline-block; /* Đảm bảo tab không bị inline như <a> */
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.products-page .tabs .tab:hover {
+  background: #e0e0e0; /* Hover nhẹ */
+  color: #222 !important;
+  text-decoration: none !important;
+}
+
+.products-page .tabs .tab.active {
+  background: #007bff;
+  color: #fff !important;
+  text-decoration: none !important;
+}

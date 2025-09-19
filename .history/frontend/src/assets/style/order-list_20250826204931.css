@@ -1,0 +1,10 @@
+/* frontend/src/assets/style/order-list.css */
+/* Định nghĩa style cho table, modal, v.v. */
+.order-status-page,
+.order-history-page {
+  padding: 20px;
+}
+
+.error-message {
+  color: red;
+}
